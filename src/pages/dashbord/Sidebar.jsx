@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { GrLogout } from 'react-icons/gr'
-import { TbUsers } from "react-icons/tb";
-import { MdOutlineManageAccounts } from "react-icons/md";
+
 
 
 import { AiOutlineBars } from 'react-icons/ai'
@@ -9,6 +7,7 @@ import { AiOutlineBars } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import SideLinks from './SideLinks'
 
 const Sidebar = () => {
     const [isActive, setActive] = useState(true)
@@ -46,39 +45,13 @@ const Sidebar = () => {
             </div>
 
             {/* Sidebar */}
-            <div className='
-            [&>.active]:bg-seconderyColor
-            [&>.active]:border-l-2   bg-lightColor h-screen'>
+            <div className='   bg-lightColor h-full'>
                 {/* logo */}
-                <h2 className='pt-8 text-4xl font-extrabold text-primaryColor text-center '>B-S</h2>
-                <NavLink to='addUser' className='flex w-full items-center px-4 py-2  text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'>
-                    <TbUsers className='w-5 h-5' />
-                    <span className='mx-4 font-medium'>Add User</span>
-                </NavLink>
-
-                {/* manage Students */}
-                <NavLink to="manageStudents" className='flex w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'>
-                    <MdOutlineManageAccounts className='w-5 h-5' />
-
-                    <span className='mx-4 font-medium'> Manage Students</span>
-                   </NavLink>
-                {/* logOutbutton */}
-                <button
-                    onClick={async () =>
-                        await logOutFirebase()
-                            .then(res => {
-                                toast.success("logOut successful")
-                                navigate('/')
-                            })
-                            .catch(error => toast.error(error.message))
-
-                    }
-                    className='flex w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'
-                >
-                    <GrLogout className='w-5 h-5 text-red-500' />
-
-                    <span className='mx-4 font-medium'>Logout</span>
-                </button>
+                <h2 className='pt-11 text-4xl font-extrabold text-primaryColor text-center '>B-S</h2>
+             
+              
+              {/* all sideLinks */}
+              <SideLinks />
             </div>
         </>
     )
