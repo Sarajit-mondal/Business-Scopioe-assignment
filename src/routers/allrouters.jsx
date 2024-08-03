@@ -11,10 +11,10 @@ import Home from "../component/home/Home";
     {
       path: "/",
       element: <Dashboard />,
-      errorElement: <div className="h-screen text-center mt-20"><h2>Page Not Found </h2> <Link to='/home'>back Home</Link></div>,
+      errorElement: <div className="h-screen text-center mt-20"><h2>Page Not Found </h2> <Link to='/'>back Home</Link></div>,
       children:[
         {
-          path: "/home",
+          path: "/",
           element: <Home />
         },
         {

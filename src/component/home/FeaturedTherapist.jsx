@@ -7,15 +7,23 @@ const slides = [
   'Slide 4',
   'Slide 5',
   'Slide 6',
+  'Slide 6',
+  'Slide 6',
+  'Slide 6',
+  'Slide 6',
+  'Slide 6',
+  'Slide 6',
   // Add more slides as needed
 ];
+import { FaLocationDot } from "react-icons/fa6";
+import { FaCar } from "react-icons/fa";
 
-import image from '../../assets/image 117.png'
+import image from '../../assets/image117.png'
 const FeaturedTherapist = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slidesToShow = 3;
-  const totalSlides = Math.ceil(slides.length / slidesToShow);
+  const slidesToShow = 4;
+  const totalSlides = Math.ceil(Math.ceil(slides.length / slidesToShow));
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
@@ -33,18 +41,27 @@ const FeaturedTherapist = () => {
     <div className="relative w-full max-w-full mx-auto bg-lightColor py-5 rounded-lg px-10 my-6">
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex justify-between  transition-transform duration-500 ease-in-out px-10"
           style={{ transform: `translateX(-${(currentSlide * 100) / totalSlides}%)` }}
         >
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-1/3 h-64 bg-gray-200 flex items-center justify-center text-xl font-bold"
+              className="flex-shrink-0 w-1/4 h-72  bg-gray-200 flex items-center justify-center"
             >
               {/* {slide} */}
-              <div>
-                <img src={image} alt="" />
-              </div>
+
+            <div className='border min-w[210px] rounded-lg border-[#E7E7E7] overflow-hidden'>
+             <div className='p-2'>
+             <img src={image} alt="" className='w-full'/>
+             <h3 className='font-semibold'>devel khan</h3>
+             <span className='text-[14px] flex items-center gap-1'><FaLocationDot />789 Maple Drive, NY</span>
+             <span className='text-[14px] flex items-center gap-1'><FaCar />789 Maple Drive, NY</span>
+             
+             </div>
+             <button className='hover:bg-primaryColor underline bg-seconderyColor ease-linear duration-200 hover:text-lightColor w-full py-1'>See Details</button>
+            </div>
+            
             </div>
           ))}
         </div>

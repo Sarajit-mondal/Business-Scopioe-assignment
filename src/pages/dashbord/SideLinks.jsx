@@ -12,7 +12,7 @@ function SideLinks() {
     <div className='[&>.active]:bg-seconderyColor
             [&>.active]:border-l-2 [&>.active]:font-semibold'>
          {/* Home */}
-         <NavLink to="home" className='flex w-full items-center px-4 py-2 mt-5'>
+         <NavLink to="/" className='flex w-full items-center px-4 py-2 mt-5'>
                     <TiHomeOutline className='w-5 h-5' />
 
                     <span className='mx-4'> Home</span>

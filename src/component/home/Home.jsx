@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchBanner from './SearchBanner'
 import FeaturedTherapist from './FeaturedTherapist'
+import FeaturedAndPopular from '../../pages/dashbord/FeaturedAndPopular'
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
        <div>
             <FeaturedTherapist />
        </div>
+       <FeaturedAndPopular />
     </div>
   )
 }

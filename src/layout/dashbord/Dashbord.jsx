@@ -4,11 +4,13 @@ import { Outlet } from 'react-router-dom'
 import Sidebar from '../../pages/dashbord/Sidebar'
 import Navbar from '../../pages/header/Navbar'
 import FeaturedTherapist from '../../component/home/FeaturedTherapist'
+import Featured from '../../pages/dashbord/Featured'
 
 function Dashboard() {
   return (
  <div className='w-full bg-backgroundColor'>
      <div className=' w-[1280px] mx-auto px-1'>
+      <Featured />
      <div className='flex min-h-full '>
       <div>
        <Sidebar />
