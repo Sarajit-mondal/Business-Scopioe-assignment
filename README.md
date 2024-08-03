@@ -31,7 +31,7 @@ This project is a web application built using React.js, based on a provided Figm
 ## Setup Instructions
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/frontend-developer-intern-task.git
+    git clone https://github.com/Sarajit-mondal/Business-Scopioe-assignment.git
     cd frontend-developer-intern-task
     ```
 2. **Install dependencies**:
