@@ -10,7 +10,6 @@ function Dashboard() {
   return (
  <div className='w-full bg-backgroundColor'>
      <div className=' w-[1280px] mx-auto px-1'>
-      <Featured />
      <div className='flex min-h-full '>
       <div>
        <Sidebar />
