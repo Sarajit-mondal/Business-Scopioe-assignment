@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Developer Intern Task</title>
-</head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;">
 
     <h1 style="color: #2c3e50;">Frontend Developer Intern Task</h1>
 
@@ -100,5 +92,4 @@ cd frontend-developer-intern-task
     <h2 id="contact" style="color: #34495e;">Contact</h2>
     <p style="color: #7f8c8d;">If you have any questions or feedback, feel free to reach out to me at <a href="mailto:your-email@example.com" style="color: #2980b9;">your-email@example.com</a>.</p>
 
-</body>
-</html>
+
