@@ -16,7 +16,7 @@ function Dashboard() {
       <div className='flex-1'>
        <div >
        <Navbar /> 
-        <div className='pl-5'><Outlet></Outlet></div>
+        <div className='m-6'><Outlet></Outlet></div>
        </div>
       </div>
     </div>

@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom"
 import { FiUser } from "react-icons/fi";
-
+import profileImage from '../../assets/profileImage.jpg'
+import { FaAngleDown } from "react-icons/fa6";
+import { useState } from "react";
 function Navbar() {
+  const [dropDown,setDropDown] = useState(false)
   return (
    <nav className="flex justify-between items-center py-5 bg-lightColor">
-     <h2 className="text-red-500 font-bold text-xl">Dev Cluster</h2>
-     <Link to="signUp" className="border-2 px-12 py-1 flex gap-3 text-gray-600 items-center rounded-md"><FiUser /> <span>username@dev-cluster.com</span></Link>
+   <div className="flex items-center gap-5 ">
+    <img src={profileImage} className="size-16 rounded-full" alt="" />
+    <div>
+        <h2 onClick={()=>setDropDown(!dropDown) } className="flex justify-between font-semibold items-center gap-2">Name        <FaAngleDown className={`${dropDown && "rotate-180 ease-linear duration-300"}`}/></h2>
+        {
+          dropDown && <p>sarajitmandal01@gmail.com</p>
+        }
+    </div>
+   </div>
    </nav>
   )
 }
